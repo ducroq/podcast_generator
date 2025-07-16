@@ -22,10 +22,10 @@ def main():
         # Sample script demonstrating the new voice system
         script = """
 [lucas]: [thoughtful] Welkom bij Mondriaan de **Denker**! Ik ben Lucas, en vandaag duiken we diep in de filosofie van Piet Mondriaan.
-[emma]: [enthusiastic] En ik ben Emma! [curious] Lucas, ik moet eerlijk zeggen... (kort pauze) ik dacht altijd dat Mondriaan gewoon een kunstenaar was?
+[emma]: En ik ben Emma! [curious] Lucas, ik moet eerlijk zeggen... (kort pauze) ik dacht altijd dat Mondriaan gewoon een kunstenaar was?
 [PAUZE]
 [lucas]: [calm] Dat denken veel mensen, Emma. Maar Mondriaan heeft meer dan *honderd* teksten geschreven over zijn filosofie!
-[emma]: [surprised] (hoog) HONDERD? (/hoog) [excited] Dat is ongelofelijk! Waar ging dat dan over?
+[emma]: [verwonderd] (hoog) HONDERD? (/hoog) [excited] Dat is ongelofelijk! Waar ging dat dan over?
 [lucas]: [contemplative] (langzaam) Hij geloofde dat kunst de wereld kon veranderen... (/langzaam) [passionate] Door perfecte harmonie te vinden tussen tegenpolen.
 [emma]: [fascinerend] ~Tegenpolen?~ Kun je daar een voorbeeld van geven?
 [lucas]: [confident] Natuurlijk! Denk aan zijn beroemde schilderijen: (pauze) **verticale** en **horizontale** lijnen, *primaire* kleuren tegen wit...
@@ -49,16 +49,6 @@ def main():
         print(f"💡 Make sure your project structure is:")
         print(f"   C:\\local_dev\\Mondriaan_podcast\\config\\config.ini")
         print(f"   C:\\local_dev\\Mondriaan_podcast\\config\\credentials\\secrets.ini")
-        
-        # Optionally create the project structure
-        create_structure = input("\n🔧 Create project structure? (y/n): ")
-        if create_structure.lower() == 'y':
-            from project_utils import quick_start_project
-            
-            # Copy your existing config
-            print("📋 Creating project structure...")
-            quick_start_project("Mondriaan_podcast")
-            print("📝 Please move your existing config files to the new structure")
-
+ 
 if __name__ == "__main__":
     main()
