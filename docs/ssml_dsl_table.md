@@ -11,6 +11,9 @@
 | `TEKST` | `<emphasis level="strong">TEKST</emphasis>` | Hoofdletters → nadruk |
 | `(pauze)` | `<break time="0.5s"/>` | Korte pauze |
 | `(lange pauze)` | `<break time="1.0s"/>` | Lange pauze |
+| `(kort pauze)` | `<break time="0.3s"/>` | Heel korte pauze |
+| `(stilte)` | `<break time="1.5s"/>` | Langere stilte |
+| `(lange stilte)` | `<break time="2.0s"/>` | Extra lange stilte |
 | `(fluister)...(/fluister)` | `<prosody volume="x-soft">...</prosody>` | Fluisteren |
 | `(snel)...(/snel)` | `<prosody rate="fast">...</prosody>` | Snel spreken |
 | `(langzaam)...(/langzaam)` | `<prosody rate="slow">...</prosody>` | Langzaam spreken |
@@ -22,6 +25,7 @@
 
 ## Emotie Markers (Voice Settings)
 
+### Legacy Markers (Backwards Compatible)
 | Nederlandse DSL | Voice Settings | Beschrijving |
 |-----------------|----------------|--------------|
 | `[EXCITED]` | `{"stability": 0.2, "style": 0.8}` | Levendig, enthousiast |
@@ -29,6 +33,59 @@
 | `[SURPRISED]` | `{"stability": 0.3, "style": 0.7}` | Verrast, geanimeerd |
 | `[CALM]` | `{"stability": 0.9, "style": 0.1}` | Kalm, stabiel |
 | `[ENTHUSIASTIC]` | `{"stability": 0.4, "style": 0.7}` | Vol energie |
+
+### Nieuwe Nederlandse Emotie Markers
+| Nederlandse DSL | Voice Settings | Beschrijving |
+|-----------------|----------------|--------------|
+| **Positieve Emoties** |
+| `[vrolijk]` | `{"stability": 0.3, "style": 0.7}` | Vrolijke stemming |
+| `[blij]` | `{"stability": 0.3, "style": 0.6}` | Blijdschap |
+| `[opgewonden]` | `{"stability": 0.2, "style": 0.8}` | Opwinding |
+| `[enthousiast]` | `{"stability": 0.4, "style": 0.7}` | Enthousiasme |
+| `[speels]` | `{"stability": 0.3, "style": 0.8}` | Speelse toon |
+| `[trots]` | `{"stability": 0.6, "style": 0.5}` | Trots |
+| `[zelfverzekerd]` | `{"stability": 0.7, "style": 0.4}` | Zelfvertrouwen |
+| `[tevreden]` | `{"stability": 0.8, "style": 0.3}` | Tevredenheid |
+| `[lachend]` | `{"stability": 0.2, "style": 0.9}` | Lachende toon |
+| **Nieuwsgierigheid & Interesse** |
+| `[nieuwsgierig]` | `{"stability": 0.4, "style": 0.6}` | Nieuwsgierigheid |
+| `[geïnteresseerd]` | `{"stability": 0.5, "style": 0.5}` | Interesse |
+| `[oprecht geïnteresseerd]` | `{"stability": 0.6, "style": 0.5}` | Oprechte interesse |
+| `[fascinerend]` | `{"stability": 0.4, "style": 0.7}` | Fascinatie |
+| `[verwonderd]` | `{"stability": 0.3, "style": 0.6}` | Verwondering |
+| **Verrassing & Ontdekking** |
+| `[verrast]` | `{"stability": 0.3, "style": 0.7}` | Verrassing |
+| `[verbaasd]` | `{"stability": 0.4, "style": 0.6}` | Verbazing |
+| `[geschokt]` | `{"stability": 0.2, "style": 0.8}` | Shock |
+| `[onder de indruk]` | `{"stability": 0.5, "style": 0.6}` | Indruk |
+| **Rust & Bezonkenheid** |
+| `[rustig]` | `{"stability": 0.9, "style": 0.1}` | Rustige toon |
+| `[kalm]` | `{"stability": 0.9, "style": 0.2}` | Kalmte |
+| `[bedachtzaam]` | `{"stability": 0.8, "style": 0.2}` | Bedachtzaamheid |
+| `[peinzend]` | `{"stability": 0.8, "style": 0.3}` | Peinzende toon |
+| `[wijsheid]` | `{"stability": 0.9, "style": 0.2}` | Wijze toon |
+| `[serieus]` | `{"stability": 0.8, "style": 0.3}` | Serieuze toon |
+| **Twijfel & Onzekerheid** |
+| `[aarzelend]` | `{"stability": 0.6, "style": 0.4}` | Aarzeling |
+| `[onzeker]` | `{"stability": 0.5, "style": 0.4}` | Onzekerheid |
+| `[twijfelend]` | `{"stability": 0.6, "style": 0.3}` | Twijfel |
+| `[voorzichtig]` | `{"stability": 0.7, "style": 0.3}` | Voorzichtigheid |
+| **Emotionele Tonen** |
+| `[bezorgd]` | `{"stability": 0.5, "style": 0.5}` | Bezorgdheid |
+| `[teleurgesteld]` | `{"stability": 0.6, "style": 0.4}` | Teleurstelling |
+| `[verdrietig]` | `{"stability": 0.7, "style": 0.3}` | Verdriet |
+| `[melancholisch]` | `{"stability": 0.8, "style": 0.3}` | Melancholie |
+| **Speciale Tonen** |
+| `[ironisch]` | `{"stability": 0.4, "style": 0.6}` | Ironie |
+| `[sarcastisch]` | `{"stability": 0.5, "style": 0.7}` | Sarcasme |
+| `[dromerig]` | `{"stability": 0.7, "style": 0.4}` | Dromerige toon |
+| `[mysterieus]` | `{"stability": 0.6, "style": 0.5}` | Mysterie |
+| `[fluisterend]` | `{"stability": 0.8, "style": 0.2}` | Fluisterend |
+| **Intensiteit Variaties** |
+| `[heel rustig]` | `{"stability": 0.95, "style": 0.1}` | Extra rustig |
+| `[super enthousiast]` | `{"stability": 0.1, "style": 0.9}` | Extra enthousiast |
+| `[licht geamuseerd]` | `{"stability": 0.6, "style": 0.4}` | Lichte amusement |
+| `[diep geraakt]` | `{"stability": 0.7, "style": 0.5}` | Diep geraakt |
 
 ## Ontbrekende SSML Features
 
@@ -64,13 +121,14 @@ Deze features zouden toegevoegd kunnen worden aan onze Nederlandse markup:
 
 ## Implementatie Status
 
-### ✅ Volledig Geïmplementeerd (15 features)
+### ✅ Volledig Geïmplementeerd (20 features)
 - Klemtonen (emphasis)
 - Volume aanpassingen (prosody volume)
 - Spreeksnelheid (prosody rate)
 - Toonhoogte (prosody pitch)
-- Pauzes (break time)
-- Emotie markers via voice settings
+- Pauzes (break time) - uitgebreid met 5 variaties
+- 40+ Nederlandse emotie markers via voice settings
+- Backwards compatibility met legacy markers
 
 ### ⚠️ Gedeeltelijk Geïmplementeerd (2 features)
 - Volume: alleen `soft` en `x-soft`, mist `loud`, `x-loud`

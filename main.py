@@ -10,14 +10,14 @@ def main():
     # Load configuration
     config = load_config()
     
-    # Sample script with emotion markers and emphasis
+    # Sample script with natural Dutch emotion markers
     script = """
-[HOST A]: Welkom bij Mondriaan de **Denker**! Ik ben Alex.
-[HOST B]: [ENTHUSIASTIC] En ik ben Sam. (snel) Vandaag duiken we supersnel in Mondriaans *filosofie* (/snel)!
+[HOST A]: [vrolijk] Welkom bij Mondriaan de **Denker**! Ik ben Lucas.
+[HOST B]: [super enthousiast] En ik ben Emma. (snel) Vandaag duiken we supersnel in Mondriaans *filosofie* (/snel)!
 [PAUZE]
-[HOST A]: [THOUGHTFUL] Wist je dat Mondriaan ~eigenlijk~ meer dan honderd teksten heeft geschreven? (pauze) (hoog) HONDERD (/hoog)!
-[HOST B]: [SURPRISED] (laag) Echt waar? (/laag) (fluister) Ik dacht dat hij alleen maar *schilderde* (/fluister)!
-[HOST A]: [EXCITED] (langzaam) Nee, hij was een echte filosoof! (/langzaam) Hij wilde de wereld veranderen met zijn kunst.
+[HOST A]: [nieuwsgierig] Wist je dat Mondriaan ~eigenlijk~ meer dan honderd teksten heeft geschreven? (kort pauze) [verrast] (hoog) HONDERD (/hoog)!
+[HOST B]: [geschokt] (laag) Echt waar? (/laag) [fluisterend] (fluister) Ik dacht dat hij alleen _schilderde_ (/fluister)!
+[HOST A]: [oprecht geïnteresseerd] (langzaam) Nee, hij was een echte filosoof! (/langzaam) [trots] Hij wilde de wereld veranderen met zijn kunst.
 """
     
     generator = PodcastGenerator(
@@ -28,7 +28,7 @@ def main():
         host_b_volume=config['host_b_volume']
     )
     
-    output_file = generator.create_podcast(script, "output/episode_01")
+    output_file = generator.create_podcast(script, "output/episode_01A")
     print(f"✓ Podcast created: {output_file}")
 
 if __name__ == "__main__":
