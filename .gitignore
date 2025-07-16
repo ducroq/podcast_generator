@@ -207,7 +207,8 @@ marimo/_lsp/
 __marimo__/
 
 # secrets and config
-config/
+config/credentials
+config/config.ini
 
 # output and temp files
 output/
