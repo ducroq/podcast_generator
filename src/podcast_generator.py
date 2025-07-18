@@ -79,7 +79,7 @@ class PodcastGenerator:
         default_voice = list(self.voices.keys())[0]
         return self.voices[default_voice], default_voice
     
-    def create_podcast(self, script, output_name):
+    def create_podcast(self, script, output_name, temp_file_folder):
         """Create complete podcast from script with voice-specific settings"""
         # Setup logging for this session
         logger, log_file = self._setup_logging(output_name)
@@ -145,7 +145,9 @@ Processed text: {processed_text}
                 print(f"📝 Processed: '{processed_text[:60]}...'")
                 
                 if processed_text:
-                    file = f"temp_{actual_voice_name}_{i}.mp3"
+                    file = os.path.join(temp_file_folder, f"temp_{actual_voice_name}_{i}.mp3")
+                    # file = os.path.join(self.output_name, f"temp_{actual_voice_name}_{i}.mp3")
+                    # file = f"temp_{actual_voice_name}_{i}.mp3"
                     
                     # Log API call
                     api_log = f"""
@@ -234,7 +236,7 @@ Final output: {output_name}.mp3
             )
         
         # Cleanup temp files
-        self.audio_processor.cleanup_temp_files(temp_files)
+        # self.audio_processor.cleanup_temp_files(temp_files)
         
         if result:
             # Get file size for logging

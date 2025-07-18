@@ -593,7 +593,7 @@ if __name__ == "__main__":
     # sys.argv = ['podcast_postprocessor.py', 'input_audio.mp3', 'output_mastered.mp3']
 
     # Example 2: Simulate batch processing
-    sys.argv = ['podcast_postprocessor.py', '--batch', r"C:\local_dev\Mondriaan_podcast\output", r"C:\local_dev\Mondriaan_podcast\output_mastered", '--preset', 'podcast']
+    sys.argv = ['podcast_postprocessor.py', '--batch', r"C:\local_dev\Mondriaan_podcast\output\episode_00", r"C:\local_dev\Mondriaan_podcast\output_mastered", '--preset', 'podcast']
     
     # Example 3: Simulate analysis
     # sys.argv = ['podcast_postprocessor.py', '--analyze', r"C:\local_dev\Mondriaan_podcast\output\some_audio.mp3"]
